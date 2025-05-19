@@ -5,6 +5,7 @@
     background-color: variables.$color-primary;
     color: variables.$color-white;
     padding: variables.$spacing-medium * 3 variables.$spacing-large;
+    width: 375px;
 
     .container {
         @include mixins.flex-center(row, space-between, flex-start);
@@ -23,11 +24,19 @@
             margin-bottom: 44px;
         }
 
-        .footer-text-mobile {
-            max-width: 400px; 
+        .footer-text {
+            max-width: 400px;
             font-size: variables.$font-size-body;
             line-height: 1.6;
             margin-bottom: variables.$spacing-medium * 2;
+
+            br {
+                display: none;
+            }
+        }
+
+        .footer-text-tablet {
+            display: none;
         }
 
         .footer-social {
@@ -56,6 +65,7 @@
         padding-top: variables.$spacing-medium * 3.5;
         margin-top: variables.$spacing-large * 3.75;
         padding-bottom: variables.$spacing-medium * 3.5;
+        width: 768px;
 
         .container {
             @include mixins.flex-center(row, space-between, flex-start);
@@ -74,17 +84,17 @@
                 margin-bottom: 44px;
             }
 
-            .footer-text-mobile {
-                display: none;
-            }
-
-            .footer-text-tablet {
-                width: 325px; 
+            .footer-text {
+                width: 285px;
                 height: auto;
                 font-size: variables.$font-size-body;
                 line-height: calc(#{variables.$spacing-medium} + 10px);
                 margin-bottom: 0;
                 margin-top: variables.$spacing-small;
+
+                br {
+                    display: none;
+                }
             }
 
             .footer-social {
@@ -92,7 +102,7 @@
                 gap: calc(#{variables.$spacing-medium} + 2px);
 
                 svg {
-                    width: 24px; 
+                    width: 24px;
                     height: 24px;
                     transition: opacity 0.3s ease;
 
@@ -110,15 +120,16 @@
     .site-footer {
         background-color: variables.$color-primary;
         color: variables.$color-white;
-        padding: variables.$spacing-medium * 3 calc(#{variables.$spacing-large} + 8px);
+        padding: variables.$spacing-medium * 3 variables.$spacing-medium * 10.25;
         padding-top: variables.$spacing-medium * 3.5;
         margin-top: variables.$spacing-large * 3.75;
         padding-bottom: variables.$spacing-medium * 3.5;
+        width: 100%;
 
         .container {
             @include mixins.flex-center(row, space-between, flex-start);
             flex-wrap: wrap;
-            max-width: 1110px;
+            max-width: 100%;
             height: auto;
             padding: 0;
 
@@ -132,30 +143,25 @@
                 margin-bottom: 44px;
             }
 
-            .footer-text-mobile {
-                display: none;
-            }
-
-            .footer-text-tablet {
-                width: 380px; 
+            .footer-text{
+                max-width: 500px;
                 height: auto;
                 font-size: calc(#{variables.$font-size-body} + 2px);
                 line-height: calc(#{variables.$spacing-medium} + 12px);
                 margin-bottom: 0;
                 margin-top: variables.$spacing-small;
-                margin-right: 140px;
+
                 br{
-                    display: none;
+                    display: block;
                 }
             }
-
 
             .footer-social {
                 @include mixins.flex-center(row, flex-start, center);
                 gap: calc(#{variables.$spacing-medium} + 2px);
 
                 svg {
-                    width: 24px; 
+                    width: 24px;
                     height: 24px;
                     transition: opacity 0.3s ease;
 

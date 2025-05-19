@@ -7,7 +7,7 @@
     width: 100%;
 
     .header-image-container {
-        width: 100%;
+        width: 375px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -29,7 +29,8 @@
     }
 
     .header-text-container {
-        height: 380px;
+        width: 100%;
+        height: auto;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
@@ -54,13 +55,13 @@
             width: 343px;
             height: 112px;
             font-size: calc(#{variables.$font-size-body} + 2px);
-            ;
             margin-bottom: variables.$spacing-medium * 2;
             margin-top: variables.$spacing-medium;
             line-height: 28px;
         }
 
     }
+
 }
 
 @include mixins.responsive(tablet) {
