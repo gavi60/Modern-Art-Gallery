@@ -1,0 +1,106 @@
+@use '../utils/_variables' as variables;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0;
+    overflow: hidden;
+    width: 260px;
+    height: 72px;
+    font-family: variables.$font-family-primary;
+    font-size: variables.$font-size-body;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0px;
+
+    &-text {
+        background-color: variables.$color-primary;
+        width: 204px;
+        height: 72px;
+        color: variables.$color-white;
+        font-family: variables.$font-family-tertiary;
+        font-size: calc(#{variables.$font-size-body} + 4px);
+        white-space: nowrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 3.64px;
+    }
+
+    &-arrow {
+        background-color: variables.$color-secondary;
+        color: white;
+        width: 56px;
+        height: 72px;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover &-text {
+        background-color: variables.$color-secondary;
+        color: variables.$color-primary;
+    }
+
+    &:hover &-arrow {
+        background-color: variables.$color-primary;
+    }
+}
+
+.btn-back {
+    z-index: 0;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0;
+    overflow: hidden;
+    width: 260px;
+    height: 72px;
+    font-family: variables.$font-family-primary;
+    font-size: variables.$font-size-body;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0px;
+
+    &-text {
+        background-color: variables.$color-primary;
+        width: 204px;
+        height: 72px;
+        color: variables.$color-white;
+        font-family: variables.$font-family-tertiary;
+        font-size: calc(#{variables.$font-size-body} + 4px);
+        letter-spacing: 3.64px;
+        white-space: nowrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-arrow {
+
+        background-color: #D5966C;
+        color: white;
+        width: 56px;
+        height: 72px;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            transform: scaleX(-1);
+        }
+    }
+
+    &:hover &-text {
+        background-color: variables.$color-secondary;
+        color: variables.$color-primary;
+    }
+
+    &:hover &-arrow {
+        background-color: variables.$color-primary;
+    }
+
+}

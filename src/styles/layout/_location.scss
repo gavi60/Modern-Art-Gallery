@@ -1,0 +1,367 @@
+@use '../utils/_variables' as variables;
+@use '../utils/_mixins' as mixins;
+
+.location {
+    padding: 0;
+
+    &-title {
+        font-size: calc(#{variables.$font-size-h1} + 10px); 
+        margin-bottom: variables.$spacing-medium;
+        color: variables.$color-white;
+        padding-top: 48px;
+        margin-left: variables.$spacing-medium;
+    }
+
+    &-subtitle {
+        font-size: variables.$font-size-h2; 
+        margin-bottom: variables.$spacing-medium;
+        color: variables.$color-secondary;
+
+    }
+
+    &-text-content {
+        margin: 0 variables.$spacing-medium;
+    }
+
+    &-text-container {
+        width: 100%;
+        height: auto;
+        background-color: variables.$color-primary;
+        margin-top: -72px;
+    }
+
+    &-text {
+        font-family: variables.$font-family-primary;
+        font-size: calc(#{variables.$font-size-body} + 2px);
+        margin-bottom: variables.$spacing-medium;
+        color: variables.$color-white;
+    }
+
+    &-text2 {
+        font-family: variables.$font-family-primary;
+        font-size: calc(#{variables.$font-size-body} + 2px);
+        padding-bottom: variables.$spacing-medium * 3.5;
+        color: variables.$color-white;
+    }
+
+    .location-image-mobile {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: variables.$spacing-medium * -4.5;
+        z-index: -1;
+    }
+
+    .location-image-tablet {
+        display: none;
+    }
+
+}
+
+.footer-location {
+    z-index: -1;
+    background-color: variables.$color-secondary;
+    color: variables.$color-primary;
+    padding: variables.$spacing-medium * 3 variables.$spacing-large;
+
+    .container {
+        @include mixins.flex-center(row, space-between, flex-start);
+        flex-wrap: wrap;
+        max-width: 341px;
+        height: auto;
+        padding: 0;
+
+        .logo {
+            font-family: variables.$font-family-secondary;
+            line-height: 20px;
+            width: 110px;
+            height: 40px;
+            font-size: 20px;
+            margin-bottom: 44px;
+        }
+
+        .footer-text-mobile {
+            max-width: 400px; 
+            font-size: variables.$font-size-body;
+            line-height: 1.6;
+            margin-bottom: variables.$spacing-medium * 2;
+            color: variables.$color-primary
+        }
+
+        .footer-social {
+            @include mixins.flex-center(row, flex-start, center);
+            gap: calc(#{variables.$spacing-medium} + 3px);
+
+            svg {
+                width: 24px; 
+                height: 24px;
+                transition: opacity 0.3s ease;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+}
+
+@include mixins.responsive(tablet) {
+
+    .location {
+
+        padding: 0;
+
+        .btn-back {
+            margin-left: calc(#{variables.$spacing-large} + 8px);
+        }
+
+        &-title {
+            font-size: calc(#{variables.$font-size-h1} + 15px); 
+            margin-bottom: variables.$spacing-medium;
+            color: variables.$color-white;
+            padding-top: 48px;
+            margin-left: calc(#{variables.$spacing-large} + 8px);
+            width: 223px;
+            padding-top: 87px;
+        }
+
+        &-subtitle {
+            font-size: variables.$font-size-h2; 
+            margin-bottom: variables.$spacing-medium;
+            color: variables.$color-secondary;
+        }
+
+        &-text-content {
+            margin-left: variables.$spacing-large * 10;
+            display: flex;
+            flex-direction: column;
+            margin-top: -150px;
+        }
+
+        &-text-container {
+            width: 100%;
+            height: 428px;
+            background-color: variables.$color-primary;
+            margin-top: -72px;
+        }
+
+        &-text {
+            font-family: variables.$font-family-primary;
+            font-size: calc(#{variables.$font-size-body} + 2px);
+            margin-bottom: variables.$spacing-medium;
+            color: variables.$color-white;
+        }
+
+        &-text2 {
+            font-family: variables.$font-family-primary;
+            font-size: calc(#{variables.$font-size-body} + 2px);
+            padding-bottom: variables.$spacing-medium * 3.5;
+            color: variables.$color-white;
+            width: 398px;
+            line-height: 28px;
+        }
+
+        .location-image-mobile {
+            display: none;
+        }
+
+        .location-image-tablet {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            position: relative;
+            top: variables.$spacing-medium * -4.5;
+            z-index: -1;
+        }
+    }
+
+    .footer-location {
+        z-index: -1;
+        background-color: variables.$color-secondary;
+        color: variables.$color-primary;
+        padding: variables.$spacing-medium * 3 variables.$spacing-large;
+
+        .container {
+            @include mixins.flex-center(row, space-between, flex-start);
+            flex-wrap: wrap;
+            max-width: 768px;
+            height: auto;
+            padding: 0;
+
+            .logo {
+                font-family: variables.$font-family-secondary;
+                line-height: 20px;
+                width: 110px;
+                height: 40px;
+                font-size: 20px;
+                margin-bottom: 44px;
+                margin-left: variables.$spacing-small;
+            }
+
+            .footer-text-mobile {
+                display: none
+            }
+
+            .footer-text-tablet {
+                max-width: 400px; 
+                font-size: variables.$font-size-body;
+                line-height: 26px;
+                margin-bottom: variables.$spacing-medium * 2;
+                color: variables.$color-primary;
+                margin-right: variables.$spacing-large * 2.7;
+            }
+
+            .footer-social {
+                @include mixins.flex-center(row, flex-start, center);
+                gap: calc(#{variables.$spacing-medium} + 3px);
+                margin-right: variables.$spacing-small;
+                svg {
+                    width: 24px; 
+                    height: 24px;
+                    transition: opacity 0.3s ease;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@include mixins.responsive(desktop) {
+
+    .location {
+
+        padding: 0;
+
+        .btn-back {
+            margin-left: variables.$spacing-medium * 9.75;
+        }
+
+        &-title {
+            font-size: calc(#{variables.$font-size-h1} + 30px); 
+            line-height: calc(#{variables.$font-size-h1} + 30px);
+            margin-bottom: variables.$spacing-medium;
+            color: variables.$color-white;
+            padding-top: 48px;
+            margin-left: variables.$spacing-medium * 9.75;
+            width: 223px;
+            padding-top: 87px;
+        }
+
+        &-subtitle {
+            font-size: calc(#{variables.$font-size-h2} + 4px); 
+            margin-bottom: variables.$spacing-medium;
+            color: variables.$color-secondary;
+        }
+
+        &-text-content {
+            margin-left: variables.$spacing-large * 23;
+            display: flex;
+            flex-direction: column;
+            margin-top: -104px;
+        }
+
+        &-text-container {
+            width: 100%;
+            height: 548px;
+            background-color: variables.$color-primary;
+            margin-top: -72px;
+        }
+
+        &-text {
+            font-family: variables.$font-family-primary;
+            font-size: calc(#{variables.$font-size-body} + 6px);
+            margin-bottom: variables.$spacing-medium;
+            color: variables.$color-white;
+            line-height: variables.$spacing-large;
+        }
+
+        &-text2 {
+            font-family: variables.$font-family-primary;
+            font-size: calc(#{variables.$font-size-body} + 6px);
+            padding-bottom: variables.$spacing-medium * 3.5;
+            color: variables.$color-white;
+            width: 540px;
+            line-height: variables.$spacing-large;
+        }
+
+        .location-image-mobile,.location-image-tablet {
+            display: none;
+        }
+
+        .location-image-desktop {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            position: relative;
+            top: variables.$spacing-medium * -4.5;
+            z-index: -1;
+        }
+    }
+
+    .footer-location {
+        z-index: -1;
+        background-color: variables.$color-secondary;
+        color: variables.$color-primary;
+        padding: variables.$spacing-medium * 3 variables.$spacing-large;
+
+        .container {
+            @include mixins.flex-center(row, space-between, flex-start);
+            flex-wrap: wrap;
+            max-width: 1110px;
+            height: auto;
+            padding: 0;
+            margin-top: variables.$spacing-large;
+
+            .logo {
+                font-family: variables.$font-family-secondary;
+                line-height: 30px;
+                width: 160px;
+                height: 58px;
+                font-size: 33px;
+                margin-bottom: 44px;
+                margin-left: variables.$spacing-small;
+            }
+
+            .footer-text-mobile {
+                display: none
+            }
+
+            .footer-text-tablet {
+                max-width: 380px; 
+                font-size: variables.$font-size-body;
+                line-height: 28px;
+                margin-bottom: variables.$spacing-medium * 2;
+                color: variables.$color-primary;
+                margin-right: variables.$spacing-large * 2.7;
+                br{
+                    display: none;
+                }
+            }
+
+            .footer-social {
+                @include mixins.flex-center(row, flex-start, center);
+                gap: calc(#{variables.$spacing-medium} + 3px);
+                margin-right: 0;
+                svg {
+                    width: 24px; 
+                    height: 24px;
+                    transition: opacity 0.3s ease;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+
+    }
+}

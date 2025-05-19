@@ -1,0 +1,170 @@
+@use '../utils/_variables' as variables;
+@use '../utils/_mixins' as mixins;
+
+.site-footer {
+    background-color: variables.$color-primary;
+    color: variables.$color-white;
+    padding: variables.$spacing-medium * 3 variables.$spacing-large;
+
+    .container {
+        @include mixins.flex-center(row, space-between, flex-start);
+        flex-wrap: wrap;
+        max-width: 341px;
+        height: auto;
+        padding: 0;
+
+        .logo {
+            color: variables.$color-white;
+            font-family: variables.$font-family-secondary;
+            line-height: 23px;
+            width: 130px;
+            height: 40px;
+            font-size: 23px;
+            margin-bottom: 44px;
+        }
+
+        .footer-text-mobile {
+            max-width: 400px; 
+            font-size: variables.$font-size-body;
+            line-height: 1.6;
+            margin-bottom: variables.$spacing-medium * 2;
+        }
+
+        .footer-social {
+            @include mixins.flex-center(row, flex-start, center);
+            gap: calc(#{variables.$spacing-medium} + 3px);
+
+            svg {
+                width: 24px;
+                height: 24px;
+                transition: opacity 0.3s ease;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+}
+
+@include mixins.responsive(tablet) {
+    .site-footer {
+        background-color: variables.$color-primary;
+        color: variables.$color-white;
+        padding: variables.$spacing-medium * 3 calc(#{variables.$spacing-large} + 8px);
+        padding-top: variables.$spacing-medium * 3.5;
+        margin-top: variables.$spacing-large * 3.75;
+        padding-bottom: variables.$spacing-medium * 3.5;
+
+        .container {
+            @include mixins.flex-center(row, space-between, flex-start);
+            flex-wrap: wrap;
+            max-width: 689px;
+            height: auto;
+            padding: 0;
+
+            .logo {
+                color: variables.$color-white;
+                font-family: variables.$font-family-secondary;
+                line-height: 23px;
+                width: 110px;
+                height: 40px;
+                font-size: 23px;
+                margin-bottom: 44px;
+            }
+
+            .footer-text-mobile {
+                display: none;
+            }
+
+            .footer-text-tablet {
+                width: 325px; 
+                height: auto;
+                font-size: variables.$font-size-body;
+                line-height: calc(#{variables.$spacing-medium} + 10px);
+                margin-bottom: 0;
+                margin-top: variables.$spacing-small;
+            }
+
+            .footer-social {
+                @include mixins.flex-center(row, flex-start, center);
+                gap: calc(#{variables.$spacing-medium} + 2px);
+
+                svg {
+                    width: 24px; 
+                    height: 24px;
+                    transition: opacity 0.3s ease;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@include mixins.responsive(desktop) {
+    .site-footer {
+        background-color: variables.$color-primary;
+        color: variables.$color-white;
+        padding: variables.$spacing-medium * 3 calc(#{variables.$spacing-large} + 8px);
+        padding-top: variables.$spacing-medium * 3.5;
+        margin-top: variables.$spacing-large * 3.75;
+        padding-bottom: variables.$spacing-medium * 3.5;
+
+        .container {
+            @include mixins.flex-center(row, space-between, flex-start);
+            flex-wrap: wrap;
+            max-width: 1110px;
+            height: auto;
+            padding: 0;
+
+            .logo {
+                color: variables.$color-white;
+                font-family: variables.$font-family-secondary;
+                line-height: 23px;
+                width: 110px;
+                height: 40px;
+                font-size: 23px;
+                margin-bottom: 44px;
+            }
+
+            .footer-text-mobile {
+                display: none;
+            }
+
+            .footer-text-tablet {
+                width: 380px; 
+                height: auto;
+                font-size: calc(#{variables.$font-size-body} + 2px);
+                line-height: calc(#{variables.$spacing-medium} + 12px);
+                margin-bottom: 0;
+                margin-top: variables.$spacing-small;
+                margin-right: 140px;
+                br{
+                    display: none;
+                }
+            }
+
+
+            .footer-social {
+                @include mixins.flex-center(row, flex-start, center);
+                gap: calc(#{variables.$spacing-medium} + 2px);
+
+                svg {
+                    width: 24px; 
+                    height: 24px;
+                    transition: opacity 0.3s ease;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+
+    }
+}

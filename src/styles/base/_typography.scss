@@ -1,0 +1,17 @@
+@use '../utils/_variables' as variables; 
+
+h1 {
+  font-family: variables.$font-family-secondary;
+  font-size: variables.$font-size-h1;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: variables.$spacing-medium;
+}
+
+h2 {
+  font-family: variables.$font-family-secondary;
+  font-size: variables.$font-size-h2;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: variables.$spacing-small;
+}

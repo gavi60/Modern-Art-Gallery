@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Big Shoulders Display';
+    src: url('./fonts/BigShouldersDisplay-Black.eot');
+    src: url('./fonts/BigShouldersDisplay-Black.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/BigShouldersDisplay-Black.woff2') format('woff2'),
+        url('./fonts/BigShouldersDisplay-Black.woff') format('woff'),
+        url('./fonts/BigShouldersDisplay-Black.ttf') format('truetype'),
+        url('./fonts/BigShouldersDisplay-Black.svg#BigShouldersDisplay-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Outfit';
+    src: url('./fonts/Outfit-Light.eot');
+    src: url('./fonts/Outfit-Light.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Outfit-Light.woff2') format('woff2'),
+        url('./fonts/Outfit-Light.woff') format('woff'),
+        url('./fonts/Outfit-Light.ttf') format('truetype'),
+        url('./fonts/Outfit-Light.svg#Outfit-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'BigShouldersDisplay-ExtraBold';
+    src: url('./fonts/BigShouldersDisplay-ExtraBold.eot');
+    src: url('./fonts/BigShouldersDisplay-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/BigShouldersDisplay-ExtraBold.woff2') format('woff2'),
+        url('./fonts/BigShouldersDisplay-ExtraBold.woff') format('woff'),
+        url('./fonts/BigShouldersDisplay-ExtraBold.ttf') format('truetype'),
+        url('./fonts/BigShouldersDisplay-ExtraBold.svg#BigShouldersDisplay-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+$color-black: #000000;
+$color-white: #FFFFFF;
+$color-primary: #151515; 
+$color-secondary: #D5966C; 
+$color-text: #444444; 
+$color-accent: #ce1616; 
+$color-background: #FCFAF9;
+
+$font-family-primary: 'Outfit', sans-serif; 
+$font-family-secondary: 'Big Shoulders Display', sans-serif; 
+$font-family-tertiary: 'BigShouldersDisplay-ExtraBold', sans-serif; 
+
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-body: 1rem;
+
+$spacing-small: 0.5rem;
+$spacing-medium: 1rem;
+$spacing-large: 2rem;
+
+$breakpoint-mobile: 375px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
