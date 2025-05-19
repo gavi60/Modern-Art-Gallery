@@ -3,9 +3,10 @@
 
 .location {
     padding: 0;
-
+    width: 375px;
+    height: auto;
     &-title {
-        font-size: calc(#{variables.$font-size-h1} + 10px); 
+        font-size: calc(#{variables.$font-size-h1} + 10px);
         margin-bottom: variables.$spacing-medium;
         color: variables.$color-white;
         padding-top: 48px;
@@ -13,7 +14,7 @@
     }
 
     &-subtitle {
-        font-size: variables.$font-size-h2; 
+        font-size: variables.$font-size-h2;
         margin-bottom: variables.$spacing-medium;
         color: variables.$color-secondary;
 
@@ -24,7 +25,7 @@
     }
 
     &-text-container {
-        width: 100%;
+        width: 375px;
         height: auto;
         background-color: variables.$color-primary;
         margin-top: -72px;
@@ -58,6 +59,9 @@
         display: none;
     }
 
+    .location-image-desktop {
+        display: none;
+    }
 }
 
 .footer-location {
@@ -65,6 +69,8 @@
     background-color: variables.$color-secondary;
     color: variables.$color-primary;
     padding: variables.$spacing-medium * 3 variables.$spacing-large;
+    width: 375px;
+    height: auto;
 
     .container {
         @include mixins.flex-center(row, space-between, flex-start);
@@ -82,12 +88,16 @@
             margin-bottom: 44px;
         }
 
-        .footer-text-mobile {
-            max-width: 400px; 
+        .footer-text {
+            max-width: 400px;
             font-size: variables.$font-size-body;
             line-height: 1.6;
             margin-bottom: variables.$spacing-medium * 2;
-            color: variables.$color-primary
+            color: variables.$color-primary;
+
+            br {
+                display: none;
+            }
         }
 
         .footer-social {
@@ -95,7 +105,7 @@
             gap: calc(#{variables.$spacing-medium} + 3px);
 
             svg {
-                width: 24px; 
+                width: 24px;
                 height: 24px;
                 transition: opacity 0.3s ease;
 
@@ -111,7 +121,8 @@
 @include mixins.responsive(tablet) {
 
     .location {
-
+        width: 800px;
+        height: auto;
         padding: 0;
 
         .btn-back {
@@ -142,7 +153,7 @@
         }
 
         &-text-container {
-            width: 100%;
+            width: 800px;
             height: 428px;
             background-color: variables.$color-primary;
             margin-top: -72px;
@@ -184,7 +195,8 @@
         background-color: variables.$color-secondary;
         color: variables.$color-primary;
         padding: variables.$spacing-medium * 3 variables.$spacing-large;
-
+        width: 800px;
+        height: auto;
         .container {
             @include mixins.flex-center(row, space-between, flex-start);
             flex-wrap: wrap;
@@ -237,32 +249,33 @@
 @include mixins.responsive(desktop) {
 
     .location {
-
         padding: 0;
+        width: 1897px;
+        height: auto;
 
         .btn-back {
             margin-left: variables.$spacing-medium * 9.75;
         }
 
         &-title {
-            font-size: calc(#{variables.$font-size-h1} + 30px); 
+            font-size: calc(#{variables.$font-size-h1} + 30px);
             line-height: calc(#{variables.$font-size-h1} + 30px);
             margin-bottom: variables.$spacing-medium;
             color: variables.$color-white;
             padding-top: 48px;
-            margin-left: variables.$spacing-medium * 9.75;
+            margin-left: variables.$spacing-medium * 15;
             width: 223px;
             padding-top: 87px;
         }
 
         &-subtitle {
-            font-size: calc(#{variables.$font-size-h2} + 4px); 
+            font-size: calc(#{variables.$font-size-h2} + 4px);
             margin-bottom: variables.$spacing-medium;
             color: variables.$color-secondary;
         }
 
         &-text-content {
-            margin-left: variables.$spacing-large * 23;
+            margin-left: variables.$spacing-large * 31.5;
             display: flex;
             flex-direction: column;
             margin-top: -104px;
@@ -292,7 +305,8 @@
             line-height: variables.$spacing-large;
         }
 
-        .location-image-mobile,.location-image-tablet {
+        .location-image-mobile,
+        .location-image-tablet {
             display: none;
         }
 
@@ -312,6 +326,7 @@
         background-color: variables.$color-secondary;
         color: variables.$color-primary;
         padding: variables.$spacing-medium * 3 variables.$spacing-large;
+        width: 1897px;
 
         .container {
             @include mixins.flex-center(row, space-between, flex-start);
@@ -331,28 +346,22 @@
                 margin-left: variables.$spacing-small;
             }
 
-            .footer-text-mobile {
-                display: none
-            }
-
-            .footer-text-tablet {
-                max-width: 380px; 
+            .footer-text {
+                max-width: 380px;
                 font-size: variables.$font-size-body;
                 line-height: 28px;
                 margin-bottom: variables.$spacing-medium * 2;
                 color: variables.$color-primary;
                 margin-right: variables.$spacing-large * 2.7;
-                br{
-                    display: none;
-                }
             }
 
             .footer-social {
                 @include mixins.flex-center(row, flex-start, center);
                 gap: calc(#{variables.$spacing-medium} + 3px);
                 margin-right: 0;
+
                 svg {
-                    width: 24px; 
+                    width: 24px;
                     height: 24px;
                     transition: opacity 0.3s ease;
 
